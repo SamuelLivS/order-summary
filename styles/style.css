@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+    --var-Paleblue: hsl(225, 100%, 94%);
+    --var-Brightblue: hsl(245, 75%, 52%);
+    --var-Verypaleblue: hsl(225, 100%, 98%);
+    --var-Desaturatedblue: hsl(224, 23%, 55%);
+    --var-Darkblue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+html {
+    font-size: 10px;
+    background-color: var(--var-Paleblue);
+}
+
+body {
+    font-size: 1.6rem;
+    background: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    max-width: 350px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.042);
+    overflow: hidden;
+}
+
+section #img-main {
+    max-width: 100%;
+    height: auto;
+}
+
+section #content {
+    padding: 40px 40px;
+}
+
+#content #title {
+    text-align: center;
+    font-weight: 900;
+    color: var(--var-Darkblue);
+    margin-bottom: 20px;
+}
+
+#content p {
+    text-align: center;
+    color: var(--var-Desaturatedblue);
+    margin-bottom: 20px;
+}
+
+#content #payment-container {
+    background-color: var(--var-Verypaleblue);
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#content #price {
+    margin: 0;
+}
+
+#price-container {
+    margin-left: -30px;
+}
+
+#payment-container h4 {
+    color: var(--var-Darkblue);
+    font-weight: 900;
+}
+
+#payment-container #link-changePlan {
+    color: var(--var-Brightblue);
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+#payment-container #link-changePlan:hover {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+section #content button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--var-Brightblue);
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.22);
+    color: white;
+    font-weight: 500;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+section #content button:hover {
+    opacity: .8;
+}
+
+section #link-cancel {
+    display: table;
+    margin: auto;
+    color: var(--var-Darkblue);
+    opacity: .7;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+section #link-cancel:hover {
+    opacity: 1;
+}
+
+.attribution {
+    margin-top: -16px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--var-Brightblue);
+}
+
+@media (max-height:610px) {
+    section {
+        margin-top: 20px;
+    }
+    .attribution {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:375px) {
+    body {
+        background: url(../images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+    }
+    main {
+        margin-bottom: 20px;
+    }
+    section #content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media (max-width:350px) {
+    main {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    section #content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
